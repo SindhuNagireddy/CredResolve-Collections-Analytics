@@ -1,0 +1,8 @@
+cohort_month,first_target_accounts,accounts_paid_within_30d,paid_within_30d_rate_pct,window_note
+2026-01,5732,437,7.623866015352408,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."
+2026-02,4193,337,8.03720486525161,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."
+2026-03,3795,294,7.747035573122529,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."
+2026-04,3072,225,7.32421875,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."
+2026-05,2566,201,7.8332034294621975,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."
+2026-06,1990,149,7.487437185929648,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."
+2026-07,569,45,7.9086115992970125,"Only accounts with a complete 30-day follow-up window; descriptive, not causal."

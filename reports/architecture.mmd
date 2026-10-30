@@ -1,0 +1,15 @@
+flowchart TD
+    A[Raw CSVs + source metadata] --> B[Staging: schema, source row, load timestamp]
+    B --> C[Clean: dedupe, type checks, timezone normalization]
+    C --> D[Reject/quarantine tables with reason codes]
+    C --> E[Golden entities and event facts]
+    E --> F[Feature layer: account-month, cohort, channel and effort features]
+    F --> G[Metrics layer: fixed-denominator recovery, RPC/PTP, cost and quality]
+    G --> H[Executive one-screen dashboard]
+    G --> I[Notebook, DQ report and executive memo]
+    J[Data contracts + tests + lineage] -. monitor .-> B
+    J -. monitor .-> C
+    J -. monitor .-> E
+    J -. monitor .-> G
+    K[Late events / backfills] --> B
+    H --> L[Leadership decision + controlled experiment]

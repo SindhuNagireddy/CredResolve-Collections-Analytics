@@ -1,0 +1,7 @@
+dataset,rule,action,raw_rows,affected_rows,business_impact_inr,interpretation
+payments,DUPLICATE_PAYMENT_ID,reject,25500,500,25901961.689999998,Repeated successful amount on later duplicate payment_id rows; exclude from recovered cash.
+calls,DUPLICATE_CALL_ID,reject,91350,1350,,Keep first row per call_id; preserve rejected rows and confirm retry semantics.
+whatsapp_events,DUPLICATE_EVENT_ID,reject,60600,600,,Keep first row per whatsapp_event_id.
+sms_events,DUPLICATE_EVENT_ID,investigate,45000,0,,No duplicate IDs detected in supplied extract.
+borrowers,SUPERSEDED_BORROWER_VERSION,deduplicate,30600,19585,,"Select latest valid borrower version, preserving history."
+agents,SUPERSEDED_AGENT_VERSION,deduplicate,30000,29000,,Select latest agent version; do not merge identities solely on name.

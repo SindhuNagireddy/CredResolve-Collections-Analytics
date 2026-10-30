@@ -1,0 +1,18 @@
+tbl,rule,action,rows_raw,rows_affected,amt_impact
+payments,DUPLICATE_PAYMENT_ID,reject,25500,500,25901961.69000001
+calls,DUPLICATE_CALL_ID,reject,91350,1350,
+calls,OUT_OF_OBSERVATION_WINDOW,reject,91350,5,
+calls,AGENT_ID_MISSING,flag,89995,1797,
+calls,STATUS_DURATION_CONFLICT (failed/busy/no-answer with >=30s),flag,89995,52272,
+call_attempts,VENDOR_ID_MISSING,flag,120000,2400,
+whatsapp_events,DUPLICATE_EVENT_ID,reject,60600,600,
+borrowers,SUPERSEDED_BORROWER_VERSION,reject,30600,19585,
+agents,SUPERSEDED_AGENT_VERSION,reject,30000,29000,
+accounts,BORROWER_ID_NULL,flag,30000,455,
+accounts,BORROWER_ID_NOT_IN_BORROWERS,flag,30000,2458,
+payments,PAYMENT_REFERENCE_MISSING,flag,25000,371,
+payments,STATUS_NOT_SUCCESS (excluded from recovery),exclude,25000,7466,563308308.2499998
+promises_to_pay,OPEN_PAST_DUE -> STALE_OPEN,correct,18000,4065,
+call_dispositions,CODE_ALIAS PROMISE_TO_PAY->PTP,correct,35000,3926,
+account_status_history,RECORDED_BEFORE_EVENT,flag,60000,30191,
+borrowers,UPDATED_BEFORE_CREATED,flag,30600,15354,

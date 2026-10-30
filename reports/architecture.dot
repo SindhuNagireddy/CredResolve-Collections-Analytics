@@ -1,0 +1,21 @@
+digraph pipeline {
+  rankdir=TB; bgcolor="white"; pad=0.25; nodesep=0.35; ranksep=0.42;
+  node [shape=box, style="rounded,filled", fillcolor="#f7f9fc", color="#46556b", fontname="Arial", fontsize=10, margin="0.18,0.10"];
+  edge [color="#607089", arrowsize=0.7, fontname="Arial", fontsize=9];
+  raw [label="Raw CSVs + source metadata"];
+  staging [label="Staging\nSchema checks • source row • load lineage"];
+  clean [label="Clean\nDeduplication • typing • timezone normalization"];
+  reject [label="Reject / correction log\nReason codes • business impact • audit trail", fillcolor="#fff8e8"];
+  golden [label="Golden layer\nAccount / borrower / agent dimensions\nPayment, contact, PTP and targeting facts"];
+  feature [label="Feature layer\nAccount-month • cohorts • channel and effort features"];
+  metrics [label="Metrics layer\nFixed denominator • recovery • RPC/PTP • cost"];
+  outputs [label="Decision outputs\nOne-screen dashboard • notebook • DQ report • memo"];
+  controls [label="Data contracts • tests • lineage • freshness / anomaly monitoring", fillcolor="#edf7f1"];
+  experiment [label="Leadership decision\nControlled pilot + holdout + ROI confidence interval"];
+  raw -> staging -> clean -> golden -> feature -> metrics -> outputs -> experiment;
+  clean -> reject [label="quarantine / correction"];
+  controls -> staging [style=dashed, label="validate"];
+  controls -> clean [style=dashed, label="monitor"];
+  controls -> golden [style=dashed, label="reconcile"];
+  controls -> metrics [style=dashed, label="quality gates"];
+}

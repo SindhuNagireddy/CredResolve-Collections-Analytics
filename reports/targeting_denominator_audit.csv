@@ -1,0 +1,9 @@
+month,targeted_accounts,ever_contacted_accounts,ever_dropped_accounts,payers_among_targeted,payers_among_contacted,payer_rate_all_targeted_pct,payer_rate_ever_contacted_pct,caveat
+2026-01,5732,1528,3083,460,109,8.025122121423585,7.133507853403141,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-02,5160,1376,2713,347,93,6.724806201550387,6.758720930232558,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-03,5666,1511,2966,475,117,8.383339216378397,7.743216412971542,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-04,5585,1543,2963,430,126,7.699194270367054,8.16591056383668,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-05,5800,1580,3063,453,125,7.810344827586207,7.9113924050632916,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-06,5535,1497,2959,433,121,7.822944896115628,8.082832331329326,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-07,5666,1530,2910,480,116,8.471584892340275,7.5816993464052285,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.
+2026-08,1566,406,790,25,8,1.5964240102171137,1.9704433497536946,Same-month association only; payment may precede target/contact. Do not interpret as conversion or causal lift.

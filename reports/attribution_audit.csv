@@ -1,0 +1,2 @@
+successful_payment_events,successful_payments_with_any_target_record,latest_target_after_payment_events,payments_with_30d_prior_target,naive_latest_vs_30d_last_touch_disagree_events,successful_recovery_amount,recovery_amount_without_30d_prior_target,interpretation
+17534,13556,8448,3108,1446,1315583964.6399999,1081218569.61,"Targeting is not proof of delivered contact or causation; this is attribution sensitivity, not causal credit."
